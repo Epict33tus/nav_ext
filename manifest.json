@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "nav_ext",
+  "version": "1.0",
+  "description": "navigate from list of urls from api or cache.",
+
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["<all_urls>"],
+  "permissions": ["tabs", "activeTab", "storage", "scripting"],
+  "web_accessible_resources": [{
+    "resources": ["content-script.js"],
+    "matches": [],
+    "extension_ids": []
+  }]
+}
